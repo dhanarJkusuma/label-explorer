@@ -81,10 +81,10 @@ func main() {
 			fmt.Print("Enter Label: ")
 			text, _ := reader.ReadString('\n')
 			keyword := strings.Fields(text)[0]
-			if keyword == "q" || keyword == `\q` {
+			if keyword == `\q` {
 				break
 			}
-			if keyword == "r" || keyword == `\r` {
+			if keyword == `\r` {
 				CallClear()
 				continue
 			}

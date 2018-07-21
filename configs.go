@@ -15,14 +15,13 @@ func ScanConfig() map[string]interface{} {
 	label = label[:0]
 	configMap = make(map[string]interface{})
 	scanLabel := false
-	file, err := os.Open("laEx.env")
+	file, err := os.Open("config.env")
 	if err != nil {
-		log.Fatalln("Cannot Read File Config {laEx.env}")
+		log.Fatalln("Cannot Read File Config {config.env}")
 		fmt.Println(err)
 	}
 	defer file.Close()
 
-	fmt.Println("Scanning...")
 	// scanning config
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
